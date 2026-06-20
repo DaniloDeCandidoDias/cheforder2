@@ -34,7 +34,7 @@ jobs:
           docker-compose logs api || echo "Serviço 'api' não encontrado ou sem logs."
 
       - name: 📞 Realizar teste de saúde na API
-        run: curl --fail http://localhost:9999/swagger-ui/index.html
+        run: curl --fail http://localhost:8080/swagger-ui/index.html
 
       - name: 🛑 Parar os contêineres após o teste
         if: always()
